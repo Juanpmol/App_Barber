@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_perfil">
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.example.ejemplonav.ui.perfil.PerfilFragment"
+        android:label="@string/title_perfil"
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_navigation_perfil_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_navigation_perfil_to_navigation_servicios"
+            app:destination="@id/navigation_servicios" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_servicios"
+        android:name="com.example.ejemplonav.ui.servicios.ServiciosFragment"
+        android:label="@string/title_servicios"
+        tools:layout="@layout/fragment_servicios" >
+        <action
+            android:id="@+id/action_navigation_servicios_to_cortesFragment"
+            app:destination="@id/cortesFragment" />
+        <action
+            android:id="@+id/action_navigation_servicios_to_rostroFragment"
+            app:destination="@id/rostroFragment" />
+        <action
+            android:id="@+id/action_navigation_servicios_to_barbaFragment"
+            app:destination="@id/barbaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.ejemplonav.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/cortesFragment"
+        android:name="com.example.ejemplonav.CortesFragment"
+        android:label="fragment_cortes"
+        tools:layout="@layout/fragment_cortes" >
+        <action
+            android:id="@+id/action_cortesFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.ejemplonav.CalendarioFragment"
+        android:label="fragment_calendario"
+        tools:layout="@layout/fragment_calendario" />
+    <fragment
+        android:id="@+id/rostroFragment"
+        android:name="com.example.ejemplonav.RostroFragment"
+        android:label="fragment_rostro"
+        tools:layout="@layout/fragment_rostro" >
+        <action
+            android:id="@+id/action_rostroFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barbaFragment"
+        android:name="com.example.ejemplonav.BarbaFragment"
+        android:label="fragment_barba"
+        tools:layout="@layout/fragment_barba" >
+        <action
+            android:id="@+id/action_barbaFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.ejemplonav.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_navigation_perfil"
+            app:destination="@id/navigation_perfil" />
+    </fragment>
+</navigation>
