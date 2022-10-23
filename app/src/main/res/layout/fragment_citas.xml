@@ -23,7 +23,7 @@
         android:layout_height="139dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginBottom="392dp"
         android:onClick="cardCitas"
         android:padding="10dp"
         android:textAlignment="center"
@@ -54,7 +54,7 @@
         android:id="@+id/buttonModificar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="28dp"
         android:background="#00EFEBEB"
         android:text="Modificar citas"
         android:textAllCaps="false"
@@ -76,6 +76,18 @@
         app:layout_constraintHorizontal_bias="0.188"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonModificar"
-        app:layout_constraintVertical_bias="0.189" />
+        app:layout_constraintVertical_bias="0.064" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.ejemplonav.ReservasFragment"
+        android:layout_width="335dp"
+        android:layout_height="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

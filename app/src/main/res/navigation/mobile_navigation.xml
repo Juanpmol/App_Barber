@@ -84,4 +84,9 @@
             android:id="@+id/action_registroFragment_to_navigation_perfil"
             app:destination="@id/navigation_perfil" />
     </fragment>
+    <fragment
+        android:id="@+id/reservasFragment"
+        android:name="com.example.ejemplonav.ReservasFragment"
+        android:label="fragment_reservas"
+        tools:layout="@layout/fragment_reservas" />
 </navigation>
