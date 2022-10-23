@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class RegistroFragment extends Fragment {
@@ -35,8 +36,17 @@ public class RegistroFragment extends Fragment {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 navController.navigate(R.id.navigation_perfil);
+                Toast.makeText(view.getContext(), "El registro ha sido exitoso", Toast.LENGTH_SHORT).show();
+                finish();
             }
+
+
+
         });
+    }
+
+    private void finish() {
     }
 }

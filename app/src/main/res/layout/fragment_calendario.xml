@@ -6,22 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".CalendarioFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fondo3" />
 
-        <CalendarView
-            android:id="@+id/calendarView"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_marginBottom="20dp"
+            android:text="Fecha"
+            android:textColor="#F3F1F1"
+            android:textSize="28dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btnHour"
+            android:backgroundTint="#5EFFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:onClick="popTimePicker"
+            android:text="Selecciona la hora de tu cita"
+            android:textSize="16sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_date"
+            android:backgroundTint="#5EFFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona la fecha">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_agendar"
+            android:backgroundTint="#5EFFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agenda tu cita" />
+
+    </LinearLayout>
 
 </FrameLayout>

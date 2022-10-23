@@ -52,7 +52,11 @@
         android:id="@+id/calendarioFragment"
         android:name="com.example.ejemplonav.CalendarioFragment"
         android:label="fragment_calendario"
-        tools:layout="@layout/fragment_calendario" />
+        tools:layout="@layout/fragment_calendario" >
+        <action
+            android:id="@+id/action_calendarioFragment_to_navigation_servicios"
+            app:destination="@id/navigation_servicios" />
+    </fragment>
     <fragment
         android:id="@+id/rostroFragment"
         android:name="com.example.ejemplonav.RostroFragment"

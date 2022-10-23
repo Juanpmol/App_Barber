@@ -29,11 +29,25 @@ public class RostroFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Button btn2 = view.findViewById(R.id.buttonCita);
+        Button btn1 = view.findViewById(R.id.buttonExfoliacion);
+        Button btn2 = view.findViewById(R.id.buttonMascarilla);
+        Button btn3 = view.findViewById(R.id.buttonCejas);
 
         final NavController navController = Navigation.findNavController(view);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.calendarioFragment);
+            }
+        });
         btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navController.navigate(R.id.calendarioFragment);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navController.navigate(R.id.calendarioFragment);

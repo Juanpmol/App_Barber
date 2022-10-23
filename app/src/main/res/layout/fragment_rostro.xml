@@ -49,7 +49,7 @@
                 android:src="@drawable/corte_barba" />
 
             <Button
-                android:id="@+id/buttonSencillo"
+                android:id="@+id/buttonExfoliacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
@@ -94,7 +94,7 @@
                 android:src="@drawable/rostro_2" />
 
             <Button
-                android:id="@+id/buttonCorteBarba"
+                android:id="@+id/buttonMascarilla"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
@@ -137,7 +137,7 @@
                 android:src="@drawable/cejas" />
 
             <Button
-                android:id="@+id/buttonCorteCejas"
+                android:id="@+id/buttonCejas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center"
@@ -157,17 +157,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/buttonCita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="buttonCita"
-            android:text="Agendar cita"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
