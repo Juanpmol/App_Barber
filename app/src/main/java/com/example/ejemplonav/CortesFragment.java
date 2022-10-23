@@ -53,5 +53,7 @@ public class CortesFragment extends Fragment {
                 navController.navigate(R.id.calendarioFragment);
             }
         });
+
+        
     }
 }

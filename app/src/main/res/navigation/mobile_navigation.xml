@@ -35,10 +35,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.ejemplonav.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_citas"
+        android:name="com.example.ejemplonav.ui.citas.CitasFragment"
+        android:label="@string/title_citas"
+        tools:layout="@layout/fragment_citas" />
     <fragment
         android:id="@+id/cortesFragment"
         android:name="com.example.ejemplonav.CortesFragment"

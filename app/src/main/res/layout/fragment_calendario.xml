@@ -4,19 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#041322"
     tools:context=".CalendarioFragment">
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/fondo3" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
 
         <TextView
@@ -32,10 +27,10 @@
 
         <Button
             android:id="@+id/btnHour"
-            android:backgroundTint="#5EFFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:backgroundTint="#5EFFFFFF"
             android:onClick="popTimePicker"
             android:text="Selecciona la hora de tu cita"
             android:textSize="16sp">
@@ -44,18 +39,18 @@
 
         <Button
             android:id="@+id/btn_date"
-            android:backgroundTint="#5EFFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#5EFFFFFF"
             android:text="Selecciona la fecha">
 
         </Button>
 
         <Button
             android:id="@+id/btn_agendar"
-            android:backgroundTint="#5EFFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#5EFFFFFF"
             android:text="Agenda tu cita" />
 
     </LinearLayout>

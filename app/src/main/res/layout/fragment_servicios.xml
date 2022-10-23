@@ -4,22 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#041322"
     tools:context=".ui.servicios.ServiciosFragment">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/fondo3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,12 +13,11 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardBarba"
-            android:layout_width="368dp"
-            android:layout_height="165dp"
-            android:layout_margin="10dp"
+            android:layout_width="326dp"
+            android:layout_height="139dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="144dp"
             android:onClick="cardBarba"
             android:padding="10dp"
             app:cardBackgroundColor="@color/white"
@@ -43,9 +28,8 @@
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardRostro"
             tools:ignore="SpeakableTextPresentCheck">
 
             <ImageView
@@ -67,8 +51,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardRostro"
-            android:layout_width="368dp"
-            android:layout_height="165dp"
+            android:layout_width="326dp"
+            android:layout_height="139dp"
             android:layout_margin="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -85,7 +69,6 @@
             app:layout_constraintBottom_toTopOf="@+id/cardBarba"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardCorte"
             tools:ignore="SpeakableTextPresentCheck">
 
             <ImageView
@@ -107,13 +90,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardCorte"
-            android:layout_width="368dp"
-            android:layout_height="165dp"
+            android:layout_width="326dp"
+            android:layout_height="139dp"
             android:layout_margin="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:onClick="cardCorte"
             android:padding="10dp"
             android:visibility="visible"
@@ -125,8 +107,10 @@
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toTopOf="@+id/cardRostro"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             tools:ignore="SpeakableTextPresentCheck">
 
             <ImageView
