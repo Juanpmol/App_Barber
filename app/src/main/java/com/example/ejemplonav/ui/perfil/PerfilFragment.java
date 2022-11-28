@@ -18,7 +18,15 @@ import androidx.navigation.Navigation;
 
 import com.example.ejemplonav.R;
 import com.example.ejemplonav.databinding.FragmentPerfilBinding;
+import com.example.ejemplonav.interfaces.IAuthService;
 import com.example.ejemplonav.model.Auth;
+import com.example.ejemplonav.model.AuthResponse;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PerfilFragment extends Fragment {
 
@@ -45,6 +53,8 @@ public class PerfilFragment extends Fragment {
         Button btn2 = view.findViewById(R.id.registro1);
         EditText usuario = view.findViewById(R.id.nameLogin);
         EditText password = view.findViewById(R.id.passwordLogin);
+        TextView textoPrueba1 = view.findViewById(R.id.textPrueba);
+        TextView textoPrueba2 = view.findViewById(R.id.textToken);
 
         final NavController navController = Navigation.findNavController(view);
 
@@ -53,9 +63,34 @@ public class PerfilFragment extends Fragment {
             public void onClick(View v) {
                 String usuarioAutorizar = usuario.getText().toString();
                 String passwordAutorizar = password.getText().toString();
-                authorizeUser(usuarioAutorizar,passwordAutorizar);
 
-                navController.navigate(R.id.navigation_servicios);
+                //Crear instancia retrofit
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl("https://andresvportfolio.000webhostapp.com/")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+
+                IAuthService authService = retrofit.create(IAuthService.class);
+
+                Auth auth = new Auth(usuarioAutorizar,passwordAutorizar);
+
+                Call<AuthResponse> call = authService.setAuth(auth);
+
+                call.enqueue(new Callback<AuthResponse>() {
+                    @Override
+                    public void onResponse(Call<AuthResponse> call, Response<AuthResponse> response) {
+                        //Display the results
+                        textoPrueba2.setText(response.body().getResult().toString());
+                    }
+
+                    @Override
+                    public void onFailure(Call<AuthResponse> call, Throwable t) {
+                        textoPrueba2.setText("Hubo una falla al leer los datos del servidor");
+                    }
+                });
+
+
+                //navController.navigate(R.id.navigation_servicios);
             }
         });
 
@@ -68,14 +103,8 @@ public class PerfilFragment extends Fragment {
 
 
     }
-    public void authorizeUser(String user, String password){
-        Auth auth = new Auth(user,password);
-    }
 
-    private void initViewModel(){
-        vModel1 = new ViewModelProvider(this).get(PerfilViewModel.class);
 
-    }
 
     @Override
     public void onDestroyView() {

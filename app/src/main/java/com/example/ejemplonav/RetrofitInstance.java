@@ -16,7 +16,8 @@ public class RetrofitInstance {
         OkHttpClient cliente = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         if(retrofit == null){
-            retrofit = new Retrofit.Builder().baseUrl("https://andresvportfolio.000webhostapp.com/")
+            retrofit = new Retrofit.Builder()
+                    .baseUrl("https://andresvportfolio.000webhostapp.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
